@@ -14,7 +14,6 @@ def fetch_buildings(bounds=None):
             east = bounds["max_lon"]
             west = bounds["min_lon"]
         else:
-            # Default Dehradun area
             delta = 0.15
             north = DEHRADUN_LAT + delta
             south = DEHRADUN_LAT - delta
@@ -22,22 +21,15 @@ def fetch_buildings(bounds=None):
             west = DEHRADUN_LON - delta
 
         tags = {"building": True}
-        buildings = ox.features_from_bbox(
-            north=north,
-            south=south,
-            east=east,
-            west=west,
-            tags=tags
-        )
+        bbox = (north, south, east, west)
+        buildings = ox.features_from_bbox(bbox=bbox, tags=tags)
 
-        # Keep only polygon buildings
         buildings = buildings[
             buildings.geometry.type.isin(['Polygon', 'MultiPolygon'])
         ].copy()
 
         buildings = buildings.to_crs(epsg=4326)
 
-        # Keep useful columns only
         keep_cols = ['geometry', 'building', 'name', 'addr:street']
         keep_cols = [c for c in keep_cols if c in buildings.columns]
         buildings = buildings[keep_cols]
