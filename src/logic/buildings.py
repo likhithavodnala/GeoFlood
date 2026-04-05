@@ -1,10 +1,11 @@
 import osmnx as ox
 import geopandas as gpd
+import streamlit as st
 
 DEHRADUN_LAT = 30.3165
 DEHRADUN_LON = 78.0469
 
-
+@st.cache_data(ttl=3600)
 def fetch_buildings(bounds=None):
     """Fetch buildings from OpenStreetMap for Dehradun"""
     try:
