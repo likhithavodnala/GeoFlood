@@ -7,7 +7,8 @@ import os
 import sys
 import json
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
+import sys
+sys.path.append(".")
 
 from src.logic.rainfall_api import get_current_rainfall, classify_rainfall
 from src.logic.buildings import fetch_buildings
