@@ -15,7 +15,7 @@ def fetch_buildings(bounds=None):
             east = bounds["max_lon"]
             west = bounds["min_lon"]
         else:
-            delta = 0.01
+            delta = 0.13
             north = DEHRADUN_LAT + delta
             south = DEHRADUN_LAT - delta
             east = DEHRADUN_LON + delta

@@ -59,8 +59,7 @@ def render_rainfall_dashboard(rainfall_data):
     col4.metric("Last Updated", rainfall_data["last_updated"])
     if not rainfall_data["daily_df"].empty:
         st.bar_chart(
-            rainfall_data["daily_df"].set_index("date")["rainfall_mm"],
-            use_container_width=True
+            rainfall_data["daily_df"].set_index("date")["rainfall_mm"]
         )
 
 
