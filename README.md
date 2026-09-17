@@ -375,34 +375,30 @@ GeoFlood/
 |   +-- Dehradun_NDWI.tif
 |
 +-- src/
+|   |
 |   +-- gui/
-|       +-- app.py
+|   |   +-- __init__.py
+|   |   +-- app.py
+|   |
+|   +-- logic/
+|       +-- __init__.py
+|       +-- analysis.py
+|       +-- buildings.py
+|       +-- flood_processing.py
+|       +-- prediction.py
+|       +-- rainfall_api.py
 |
 +-- .devcontainer/
 |
 +-- .streamlit/
+|   +-- config.toml
 |
 +-- .gitignore
 +-- main.py
 +-- requirements.txt
 +-- README.md
-```
-
-### Important Files and Folders
-
-| File or Folder | Purpose |
-|---|---|
-| `data/` | Contains satellite data used by the application |
-| `Dehradun_NDWI.tif` | Pre-loaded satellite data used for flood detection |
-| `src/gui/app.py` | Main Streamlit application |
-| `.streamlit/` | Streamlit application configuration |
-| `.devcontainer/` | Development environment configuration |
-| `requirements.txt` | Required Python packages |
-| `main.py` | Project entry point |
-| `README.md` | Project documentation |
 
 ---
-
 ## Installation
 
 ### 1. Clone the Repository
