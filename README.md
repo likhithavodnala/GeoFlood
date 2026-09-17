@@ -397,8 +397,29 @@ GeoFlood/
 +-- main.py
 +-- requirements.txt
 +-- README.md
+```
+
+### Important Files and Folders
+
+| File or Folder | Purpose |
+|---|---|
+| `data/` | Contains satellite data used by the application |
+| `Dehradun_NDWI.tif` | Pre-loaded satellite data used for flood detection |
+| `src/gui/app.py` | Main Streamlit application and user interface |
+| `src/logic/` | Contains the main processing and analysis components |
+| `analysis.py` | Handles analysis-related operations |
+| `buildings.py` | Handles building data and building-related operations |
+| `flood_processing.py` | Handles flood-area processing |
+| `prediction.py` | Handles pre-flood prediction operations |
+| `rainfall_api.py` | Handles rainfall data retrieval |
+| `.streamlit/` | Streamlit application configuration |
+| `.devcontainer/` | Development environment configuration |
+| `requirements.txt` | Required Python packages |
+| `main.py` | Project entry point |
+| `README.md` | Project documentation |
 
 ---
+
 ## Installation
 
 ### 1. Clone the Repository
@@ -434,7 +455,6 @@ pip install -r requirements.txt
 ```
 
 ---
-
 ## How to Run
 
 Run the Streamlit application using:
